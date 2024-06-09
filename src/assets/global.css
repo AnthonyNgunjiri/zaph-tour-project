@@ -20,6 +20,7 @@ body{
     font-family: var(--family);
     color:var(--primary-color) ;
     font-size:  1.4em;
+    overflow-x:hidden;
     
 }
 @media screen and (max-width: 37.74em) {
