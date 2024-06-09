@@ -4,7 +4,7 @@ const Homie = ({ destiny, title, brief, price }) => {
 <section className="destiny">
         <div className="test">{destiny}</div>
         <div className="dest-item" >
-        <h1 className="ribbon">{title}</h1>
+        <span id="rib"><h1 className="ribbon">{title}</h1></span> 
         <p className="tell">{brief}</p>
         <h2 className="ribbon2">{price}</h2>
         </div>
