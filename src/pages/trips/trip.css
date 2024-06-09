@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #6b240c;
+    --sec-color: #994d1c;
+    --third: #e48f45;
+    --white: #f5cca0;
+    --family: "Fira Sans", sans-serif;
+    --familio: "Metal Mania", system-ui;
+    --blue: #153448;
+  }
+  
+  .par {
+    padding: 2rem;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 0.4rem;
+  }
+  
+  .blogger {
+    width: 16rem;
+    height: 8rem;
+    background-color: var(--primary-color);
+    color: var(--third);
+  }
+  .blogger:hover{
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  
+  .blog {
+    display: block;
+    justify-content: center;
+    align-content: center;
+    margin: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .matripo {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 1.2rem;
+    margin: 2rem;
+  }
+  
+  .package {
+    height: 16rem;
+    width: 15rem;
+    border: 1px solid #994d1c;
+  }
+  
+  .package img {
+    width: 100%;
+    height: 100%;
+    /* clip-path: polygon(100% 1%, 80% 52%, 100% 100%, 21% 100%, 0 48%, 23% 0);  */
+    /* clip-path: ellipse(47% 50% at 52% 50%); */
+  }
+  
+  .tour {
+    border: 2px solid #994d1c;
+  }
+  
+  #rib {
+    display: grid;
+    place-content: center;
+    align-content: center;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .card {
+      grid-template-columns: repeat(4, 2fr);
+    }
+  
+    .matripo {
+      grid-template-columns: repeat(4, 2fr);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .card {
+      grid-template-columns: repeat(3, 2fr);
+    }
+  
+    .matripo {
+      grid-template-columns: repeat(3, 2fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  
+    .matripo {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  
+    .blog {
+      margin: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .blogger {
+      width: 14rem;
+      height: 7rem;
+    }
+  
+    .package {
+      height: 14rem;
+      width: 13rem;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .card {
+      grid-template-columns: 1fr;
+    }
+  
+    .matripo {
+      grid-template-columns: 1fr;
+    }
+  
+    .blog {
+      margin: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  
+    .blogger {
+      width: 12rem;
+      height: 6rem;
+    }
+  
+    .package {
+      height: 12rem;
+      width: 11rem;
+    }
+  }
+  

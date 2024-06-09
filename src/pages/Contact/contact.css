@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #6b240c;
+  --sec-color: #994d1c;
+  --third: #e48f45;
+  --white: #f5cca0;
+  --family: "Fira Sans", sans-serif;
+  --familio: "Metal Mania", system-ui;
+  --blue: #153448;
+}
+
+/* General Styles */
+body {
+  font-family: var(--family);
+  color: var(--primary-color);
+}
+
+.for {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding-left: 3rem;
+  justify-content: space-around;
+}
+
+.formie {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.formie button,
+label,
+input {
+  width: 80vh;
+  border-radius: 12px;
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formie {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 2px solid #994d1c;
+  width: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(/src/assets/lion.jpeg) no-repeat center/cover;
+  border-radius: 12px;
+  align-items: center;
+  color: var(--white);
+}
+
+.label1 {
+  padding-top: 2rem;
+}
+
+#meso {
+  height: 7rem;
+  border-style: none;
+}
+
+.servers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 40vh;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.ribbon2 p {
+  fill:var(--third);
+}
+
+.feedback {
+  border: 2px solid #994d1c;
+}
+
+.ribbon2 p,
+.ribbon2 h3,
+.ribbon2 a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--third);
+  
+}
+
+.ribbon2 p i,
+.ribbon2 h3 i,
+.ribbon2 a i {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: var(--blue);
+}
+
+.wen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  text-decoration: none;
+}
+
+.wen a {
+  text-decoration: none;
+  color: var(--third);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .for {
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+
+  .formie button,
+  .formie input {
+    width: 100%;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .for {
+    gap: 1rem;
+  }
+
+  .ribbon2 {
+    text-align: center;
+  }
+
+  .wen {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .formie button,
+  .formie input {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .ribbon2 h3 {
+    font-size: 1.2rem;
+  }
+
+  .ribbon2 p,
+  .ribbon2 a {
+    font-size: 1rem;
+  }
+
+  .contact {
+    gap: 1rem;
+  }
+}

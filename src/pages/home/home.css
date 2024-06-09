@@ -1,0 +1,325 @@
+:root {
+  --primary-color: #6b240c;
+  --sec-color: #994d1c;
+  --third: #e48f45;
+  --white: #f5cca0;
+  --family: "Fira Sans", sans-serif;
+  --familio: "Metal Mania", system-ui;
+}
+
+#me {
+  animation: 2s slide-right 0.4s forwards;
+  transform: translateX(-10%);
+}
+
+@keyframes slide-right {
+  to {
+    top: 200px;
+    transform: translateX(20%);
+  }
+}
+
+#icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#icons p {
+  font-size: 5rem;
+}
+
+.bg {
+  width: 100%;
+  height: 78vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(/src/assets/white.jpeg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--familio);
+  font-size: 3rem;
+  color: #eeeeee;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.aerial {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 94%;
+  height: 50vh;
+  gap: 2rem;
+  place-content: center;
+  place-items: center;
+  margin: 2rem auto;
+  padding: 1.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .aerial {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+
+  .bg {
+    font-size: 2rem;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .aerial {
+    grid-template-columns: 1fr;
+  }
+
+  .bg {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bg {
+    font-size: 1.2rem;
+  }
+}
+
+.abt {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alchemi {
+  border: 2px solid #994d1c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #6b240c;
+  color: var(--third);
+}
+.alchemi:hover{
+  background-color:var(--blue) ;
+  color: var(--white);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dest {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.4rem;
+  margin: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .dest {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dest {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dest {
+    grid-template-columns: 1fr;
+    margin-top: 8rem;
+  }
+}
+
+.destiny {
+  border: 2px solid #e48f45;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #994d1c;
+}
+
+.test {
+  height: 20rem;
+  width: 12rem;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.test img {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.newsletter-title {
+  font-size: 2rem;
+  color: #eeeeee;
+  margin-bottom: 10px;
+}
+
+.newsletter-description {
+  font-size: 1rem;
+  color: var(--third);
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.form button,
+label,
+input {
+  width: 100%;
+  border-radius: 12px;
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 2px solid #994d1c;
+  width: 80%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+    url(/src/assets/lion.jpeg) no-repeat center/cover;
+  border-radius: 12px;
+  align-items: center;
+  color: var(--white);
+}
+
+.label1 {
+  padding-top: 2rem;
+}
+
+.meso {
+  height: 7rem;
+  border-style: none;
+}
+
+/* HTML: <div class="tooltip">This is a Speech Bubble with a solid coloration and with border radius </div> */
+.tooltip {
+  color:var(--third);
+  font-size: 18px;
+  max-width: 28ch;
+  text-align: center;
+}
+.tooltip {
+  /* triangle dimension */
+  --b: 2em; /* base */
+  --h: 1em; /* height */
+
+  --p: 50%; /* triangle position (0%:left 100%:right) */
+  --r: 1.2em; /* the radius */
+  --c: var(--sec-color);
+
+  padding: 1em;
+  border-radius: var(--r) var(--r) min(var(--r),100% - var(--p) - var(--b)/2) min(var(--r),var(--p) - var(--b)/2)/var(--r);
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+    min(100%,var(--p) + var(--b)/2) 100%,
+    var(--p) calc(100% + var(--h)),
+    max(0%  ,var(--p) - var(--b)/2) 100%);
+  background: var(--c);
+  border-image: conic-gradient(var(--c) 0 0) fill 0/
+    var(--r) calc(100% - var(--p) - var(--b)/2) 0 calc(var(--p) - var(--b)/2)/
+    0 0 var(--h) 0;
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.teller {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-left: 2rem;
+  place-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .teller {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teller {
+    grid-template-columns: 1fr;
+  }
+}
+
+.monial {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  border: 2px solid #6b240c;
+  margin-left: 2rem;
+  place-items: center;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+.monial:hover{
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 576px) {
+  .monial {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+#clien {
+  width: 34vh;
+  height: 24vh;
+  object-fit: cover;
+  border: 2px solid #eeee;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 70%;
+}
+
+

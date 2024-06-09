@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #6b240c;
+  --sec-color: #994d1c;
+  --third: #e48f45;
+  --white: #f5cca0;
+  --family: "Fira Sans", sans-serif;
+  --familio: "Metal Mania", system-ui;
+  --blue: #153448;
+}
+
+.dela {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 1.4rem;
+  margin: 1.4rem;
+}
+
+.depo {
+  border: 2px solid #6b240c;
+  border-radius: 12px;
+}
+
+.destine {
+  width: 26rem;
+  height: 17rem;
+  border-radius: 12px;
+}
+
+.destine img {
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(
+    20% 0,
+    0 0,
+    0 54%,
+    0 100%,
+    19% 81%,
+    43% 81%,
+    77% 100%,
+    100% 100%,
+    100% 48%,
+    100% 0,
+    80% 19%,
+    49% 19%
+  );
+}
+
+.infor {
+  padding: 0.4rem;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.infor a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .dela {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .destine {
+    width: 22rem;
+    height: 14rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dela {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destine {
+    width: 20rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dela {
+    grid-template-columns: 1fr;
+  }
+
+  .destine {
+    width: 18rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dela {
+    grid-template-columns: 1fr;
+  }
+
+  .destine {
+    width: 16rem;
+    height: 10rem;
+  }
+
+  .infor a {
+    font-size: 1rem;
+  }
+}
